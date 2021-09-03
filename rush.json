@@ -10,14 +10,6 @@
   "projectFolderMaxDepth": 7,
   "projects": [
     {
-      "packageName": "@bentley/build-tools",
-      "projectFolder": "../imodeljs/tools/build"
-    },
-    {
-      "packageName": "@bentley/eslint-plugin",
-      "projectFolder": "../imodeljs/tools/eslint-plugin"
-    },
-    {
       "packageName": "@bentley/context-registry-client",
       "projectFolder": "../imodeljs/clients/context-registry"
     },
@@ -46,48 +38,32 @@
       "projectFolder": "../imodeljs/clients/telemetry"
     },
     {
+      "packageName": "@bentley/imodeljs-backend",
+      "projectFolder": "../imodeljs/core/backend"
+    },
+    {
+      "packageName": "@bentley/backend-itwin-client",
+      "projectFolder": "../imodeljs/core/backend-itwin-client"
+    },
+    {
       "packageName": "@bentley/bentleyjs-core",
       "projectFolder": "../imodeljs/core/bentley"
-    },
-    {
-      "packageName": "@bentley/geometry-core",
-      "projectFolder": "../imodeljs/core/geometry"
-    },
-    {
-      "packageName": "@bentley/orbitgt-core",
-      "projectFolder": "../imodeljs/core/orbitgt"
     },
     {
       "packageName": "@bentley/imodeljs-common",
       "projectFolder": "../imodeljs/core/common"
     },
     {
-      "packageName": "@bentley/imodeljs-backend",
-      "projectFolder": "../imodeljs/core/backend"
-    },
-    // {
-    //   "packageName": "@bentley/imodeljs-transformer",
-    //   "projectFolder": "../imodeljs/core/transformer"
-    // },
-    // {
-    //   "packageName": "@bentley/imodeljs-editor-common",
-    //   "projectFolder": "../imodeljs/editor/common"
-    // },
-    // {
-    //   "packageName": "@bentley/imodeljs-editor-backend",
-    //   "projectFolder": "../imodeljs/editor/backend"
-    // },
-    // {
-    //   "packageName": "@bentley/imodeljs-editor-frontend",
-    //   "projectFolder": "../imodeljs/editor/frontend"
-    // },
-    {
-      "packageName": "@bentley/backend-itwin-client",
-      "projectFolder": "../imodeljs/core/backend-itwin-client"
+      "packageName": "@bentley/ecschema-metadata",
+      "projectFolder": "../imodeljs/core/ecschema-metadata"
     },
     {
-      "packageName": "@bentley/imodeljs-quantity",
-      "projectFolder": "../imodeljs/core/quantity"
+      "packageName": "@bentley/electron-manager",
+      "projectFolder": "../imodeljs/core/electron-manager"
+    },
+    {
+      "packageName": "@bentley/express-server",
+      "projectFolder": "../imodeljs/core/express-server"
     },
     {
       "packageName": "@bentley/imodeljs-frontend",
@@ -98,60 +74,104 @@
       "projectFolder": "../imodeljs/core/frontend-devtools"
     },
     {
-      "packageName": "@bentley/webgl-compatibility",
-      "projectFolder": "../imodeljs/core/webgl-compatibility"
+      "packageName": "@bentley/geometry-core",
+      "projectFolder": "../imodeljs/core/geometry"
+    },
+    {
+      "packageName": "@bentley/hypermodeling-frontend",
+      "projectFolder": "../imodeljs/core/hypermodeling"
     },
     {
       "packageName": "@bentley/imodeljs-i18n",
       "projectFolder": "../imodeljs/core/i18n"
     },
-    // {
-    //   "packageName": "@bentley/analytical-backend",
-    //   "projectFolder": "../imodeljs/domains/analytical/backend"
-    // },
-    // {
-    //   "packageName": "@bentley/linear-referencing-backend",
-    //   "projectFolder": "../imodeljs/domains/linear-referencing/backend"
-    // },
-    // {
-    //   "packageName": "@bentley/linear-referencing-common",
-    //   "projectFolder": "../imodeljs/domains/linear-referencing/common"
-    // },
-    // {
-    //   "packageName": "@bentley/physical-material-backend",
-    //   "projectFolder": "../imodeljs/domains/physical-material/backend"
-    // },
     {
-      "packageName": "@bentley/presentation-common",
-      "projectFolder": "../imodeljs/presentation/common"
+      "packageName": "@bentley/imodeljs-markup",
+      "projectFolder": "../imodeljs/core/markup"
+    },
+    {
+      "packageName": "@bentley/orbitgt-core",
+      "projectFolder": "../imodeljs/core/orbitgt"
+    },
+    {
+      "packageName": "@bentley/imodeljs-quantity",
+      "projectFolder": "../imodeljs/core/quantity"
+    },
+    {
+      "packageName": "@bentley/webgl-compatibility",
+      "projectFolder": "../imodeljs/core/webgl-compatibility"
     },
     {
       "packageName": "@bentley/presentation-backend",
       "projectFolder": "../imodeljs/presentation/backend"
     },
     {
-      "packageName": "@bentley/presentation-frontend",
-      "projectFolder": "../imodeljs/presentation/frontend"
+      "packageName": "@bentley/presentation-common",
+      "projectFolder": "../imodeljs/presentation/common"
     },
     {
       "packageName": "@bentley/presentation-components",
       "projectFolder": "../imodeljs/presentation/components"
     },
     {
+      "packageName": "@bentley/presentation-frontend",
+      "projectFolder": "../imodeljs/presentation/frontend"
+    },
+    {
       "packageName": "@bentley/presentation-testing",
       "projectFolder": "../imodeljs/presentation/testing"
+    },
+    {
+      "packageName": "@bentley/backend-webpack-tools",
+      "projectFolder": "../imodeljs/tools/backend-webpack"
+    },
+    {
+      "packageName": "@bentley/build-tools",
+      "projectFolder": "../imodeljs/tools/build"
+    },
+    {
+      "packageName": "@bentley/certa",
+      "projectFolder": "../imodeljs/tools/certa"
+    },
+    {
+      "packageName": "@bentley/eslint-plugin",
+      "projectFolder": "../imodeljs/tools/eslint-plugin"
+    },
+    {
+      "packageName": "@bentley/extension-webpack-tools",
+      "projectFolder": "../imodeljs/tools/extension-webpack"
+    },
+    {
+      "packageName": "internal-tools",
+      "projectFolder": "../imodeljs/tools/internal"
+    },
+    {
+      "packageName": "@bentley/oidc-signin-tool",
+      "projectFolder": "../imodeljs/tools/oidc-signin-tool"
+    },
+    {
+      "packageName": "@bentley/perf-tools",
+      "projectFolder": "../imodeljs/tools/perf-tools"
+    },
+    {
+      "packageName": "@bentley/webpack-tools-core",
+      "projectFolder": "../imodeljs/tools/webpack-core"
     },
     {
       "packageName": "@bentley/ui-abstract",
       "projectFolder": "../imodeljs/ui/abstract"
     },
     {
+      "packageName": "@bentley/ui-components",
+      "projectFolder": "../imodeljs/ui/components"
+    },
+    {
       "packageName": "@bentley/ui-core",
       "projectFolder": "../imodeljs/ui/core"
     },
     {
-      "packageName": "@bentley/ui-components",
-      "projectFolder": "../imodeljs/ui/components"
+      "packageName": "@bentley/ui-framework",
+      "projectFolder": "../imodeljs/ui/framework"
     },
     {
       "packageName": "@bentley/ui-imodel-components",
@@ -162,216 +182,36 @@
       "projectFolder": "../imodeljs/ui/ninezone"
     },
     {
-      "packageName": "@bentley/ui-framework",
-      "projectFolder": "../imodeljs/ui/framework"
+      "packageName": "@bentley/property-grid-react",
+      "projectFolder": "../viewer-components-react/packages/property-grid"
     },
-    {
-      "packageName": "@bentley/ecschema-metadata",
-      "projectFolder": "../imodeljs/core/ecschema-metadata"
-    },
-    // {
-    //   "packageName": "@bentley/ecschema-locaters",
-    //   "projectFolder": "../imodeljs/core/ecschema-locaters"
-    // },
-    // {
-    //   "packageName": "@bentley/ecschema2ts",
-    //   "projectFolder": "../imodeljs/tools/ecschema2ts"
-    // },
-    // {
-    //   "packageName": "@bentley/ecschema-editing",
-    //   "projectFolder": "../imodeljs/core/ecschema-editing"
-    // },
-    {
-      "packageName": "@bentley/webpack-tools-core",
-      "projectFolder": "../imodeljs/tools/webpack-core"
-    },
-    {
-      "packageName": "@bentley/backend-webpack-tools",
-      "projectFolder": "../imodeljs/tools/backend-webpack"
-    },
-    {
-      "packageName": "@bentley/extension-webpack-tools",
-      "projectFolder": "../imodeljs/tools/extension-webpack"
-    },
-    {
-      "packageName": "@bentley/imodeljs-markup",
-      "projectFolder": "../imodeljs/core/markup"
-    },
-    {
-      "packageName": "@bentley/hypermodeling-frontend",
-      "projectFolder": "../imodeljs/core/hypermodeling"
-    },
-    {
-      "packageName": "@bentley/electron-manager",
-      "projectFolder": "../imodeljs/core/electron-manager"
-    },
-    // {
-    //   "packageName": "@bentley/mobile-manager",
-    //   "projectFolder": "../imodeljs/core/mobile-manager"
-    // },
-    {
-      "packageName": "@bentley/express-server",
-      "projectFolder": "../imodeljs/core/express-server"
-    },
-    // {
-    //   "packageName": "@bentley/ecschema-rpcinterface-common",
-    //   "projectFolder": "../imodeljs/core/ecschema-rpc/common"
-    // },
-    // {
-    //   "packageName": "@bentley/ecschema-rpcinterface-impl",
-    //   "projectFolder": "../imodeljs/core/ecschema-rpc/impl"
-    // },
-    // {
-    //   "packageName": "@bentley/ecschema-rpcinterface-tests",
-    //   "projectFolder": "../imodeljs/full-stack-tests/ecschema-rpc-interface"
-    // },
-    {
-      "packageName": "@bentley/certa",
-      "projectFolder": "../imodeljs/tools/certa"
-    },
-    {
-      "packageName": "@bentley/perf-tools",
-      "projectFolder": "../imodeljs/tools/perf-tools"
-    },
-    {
-      "packageName": "@bentley/oidc-signin-tool",
-      "projectFolder": "../imodeljs/tools/oidc-signin-tool"
-    },
-    {
-      "packageName": "@bentley/geonames-extension",
-      "projectFolder": "../imodeljs/extensions/geonames"
-    },
-    {
-      "packageName": "@bentley/map-layers",
-      "projectFolder": "../imodeljs/extensions/map-layers"
-    },
-    {
-      "packageName": "internal-tools",
-      "projectFolder": "../imodeljs/tools/internal"
-    },
-    // {
-    //   "packageName": "export-gltf",
-    //   "projectFolder": "../imodeljs/test-apps/export-gltf"
-    // },
-    // {
-    //   "packageName": "imjs-importer",
-    //   "projectFolder": "../imodeljs/test-apps/imjs-importer"
-    // },
-    // {
-    //   "packageName": "imodel-from-geojson",
-    //   "projectFolder": "../imodeljs/test-apps/imodel-from-geojson"
-    // },
-    // {
-    //   "packageName": "imodel-transformer",
-    //   "projectFolder": "../imodeljs/test-apps/imodel-transformer"
-    // },
-    // {
-    //   "packageName": "@bentley/ui-test-extension",
-    //   "projectFolder": "../imodeljs/test-apps/ui-test-extension"
-    // },
-    // {
-    //   "packageName": "display-test-app",
-    //   "projectFolder": "../imodeljs/test-apps/display-test-app"
-    // },
-    // {
-    //   "packageName": "display-performance-test-app",
-    //   "projectFolder": "../imodeljs/test-apps/display-performance-test-app"
-    // },
-    // {
-    //   "packageName": "imodel-from-reality-model",
-    //   "projectFolder": "../imodeljs/test-apps/imodel-from-reality-model"
-    // },
-    // {
-    //   "packageName": "imodel-from-orbitgt-pointcloud",
-    //   "projectFolder": "../imodeljs/test-apps/imodel-from-orbitgt"
-    // },
-    // {
-    //   "packageName": "ninezone-test-app",
-    //   "projectFolder": "../imodeljs/test-apps/ninezone-test-app"
-    // },
-    // {
-    //   "packageName": "presentation-test-app",
-    //   "projectFolder": "../imodeljs/test-apps/presentation-test-app"
-    // },
-    // {
-    //   "packageName": "ui-test-app",
-    //   "projectFolder": "../imodeljs/test-apps/ui-test-app"
-    // },
-    // {
-    //   "packageName": "core-full-stack-tests",
-    //   "projectFolder": "../imodeljs/full-stack-tests/core"
-    // },
-    // {
-    //   "packageName": "native-app-full-stack-tests",
-    //   "projectFolder": "../imodeljs/full-stack-tests/native-app"
-    // },
-    // {
-    //     "packageName": "presentation-full-stack-tests",
-    //     "projectFolder": "../imodeljs/full-stack-tests/presentation"
-    //   },
-    // {
-    //   "packageName": "rpc-full-stack-tests",
-    //   "projectFolder": "../imodeljs/full-stack-tests/rpc"
-    // },
-    // {
-    //   "packageName": "@bentley/rpcinterface-full-stack-tests",
-    //   "projectFolder": "../imodeljs/full-stack-tests/rpc-interface"
-    // },
-    // {
-    //   "packageName": "@bentley/imodelhub-client-tests",
-    //   "projectFolder": "../imodeljs/full-stack-tests/imodelhub-client"
-    // },
-    {
-      "packageName": "@itwin/viewer-react",
-      "projectFolder": "../viewer/packages/modules/viewer-react"
-    },
-    {
-      "packageName": "@itwin/error-handling-react",
-      "projectFolder": "../viewer/packages/modules/error-handling-react"
-    },
-    // {
-    //   "packageName": "@itwin/cra-template-web-viewer",
-    //   "projectFolder": "../viewer/packages/modules/cra-template-web-viewer"
-    // },
-    {
-      "packageName": "@itwin/web-viewer-react",
-      "projectFolder": "../viewer/packages/modules/web-viewer-react"
-    },
-    {
-      "packageName": "@itwin/desktop-viewer-react",
-      "projectFolder": "../viewer/packages/modules/desktop-viewer-react"
-    },
-    // {
-    //   "packageName": "@itwin/cra-template-desktop-viewer",
-    //   "projectFolder": "../viewer/packages/modules/cra-template-desktop-viewer"
-    // },
-    {
-      "packageName": "@itwin/web-viewer-test",
-      "projectFolder": "../viewer/packages/apps/web-viewer-test"
-    },
-    // {
-    //   "packageName": "@itwin/cdn-viewer",
-    //   "projectFolder": "../viewer/packages/apps/cdn-viewer"
-    // },
-    {
-      "packageName": "@itwin/desktop-viewer-test",
-      "projectFolder": "../viewer/packages/apps/desktop-viewer-test"
-    },
-    // {
-    //   "packageName": "@bentley/imodel-select-react",
-    //   "projectFolder": "../viewer-components-react/packages/imodel-select"
-    // },
     {
       "packageName": "@bentley/tree-widget-react",
       "projectFolder": "../viewer-components-react/packages/tree-widget"
     },
     {
-      "packageName": "@bentley/property-grid-react",
-      "projectFolder": "../viewer-components-react/packages/property-grid"
+      "packageName": "@itwin/desktop-viewer-test",
+      "projectFolder": "../viewer/packages/apps/desktop-viewer-test"
     },
-    // {
-    //   "packageName": "@bentley/measure-tools-react",
-    //   "projectFolder": "../viewer-components-react/packages/measure-tools"
-    // }
+    {
+      "packageName": "@itwin/web-viewer-test",
+      "projectFolder": "../viewer/packages/apps/web-viewer-test"
+    },
+    {
+      "packageName": "@itwin/desktop-viewer-react",
+      "projectFolder": "../viewer/packages/modules/desktop-viewer-react"
+    },
+    {
+      "packageName": "@itwin/error-handling-react",
+      "projectFolder": "../viewer/packages/modules/error-handling-react"
+    },
+    {
+      "packageName": "@itwin/viewer-react",
+      "projectFolder": "../viewer/packages/modules/viewer-react"
+    },
+    {
+      "packageName": "@itwin/web-viewer-react",
+      "projectFolder": "../viewer/packages/modules/web-viewer-react"
+    }
   ]
 }
