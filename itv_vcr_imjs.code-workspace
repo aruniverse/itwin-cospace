@@ -4,12 +4,15 @@
       "path": "."
     },
     {
+      "name": "imjs",
       "path": "..\\imodeljs"
     },
     {
+      "name": "itv",
       "path": "..\\viewer"
     },
     {
+      "name": "vcr",
       "path": "..\\viewer-components-react"
     }
   ],

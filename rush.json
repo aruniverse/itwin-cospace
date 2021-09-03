@@ -65,22 +65,22 @@
       "packageName": "@bentley/imodeljs-backend",
       "projectFolder": "../imodeljs/core/backend"
     },
-    {
-      "packageName": "@bentley/imodeljs-transformer",
-      "projectFolder": "../imodeljs/core/transformer"
-    },
-    {
-      "packageName": "@bentley/imodeljs-editor-common",
-      "projectFolder": "../imodeljs/editor/common"
-    },
-    {
-      "packageName": "@bentley/imodeljs-editor-backend",
-      "projectFolder": "../imodeljs/editor/backend"
-    },
-    {
-      "packageName": "@bentley/imodeljs-editor-frontend",
-      "projectFolder": "../imodeljs/editor/frontend"
-    },
+    // {
+    //   "packageName": "@bentley/imodeljs-transformer",
+    //   "projectFolder": "../imodeljs/core/transformer"
+    // },
+    // {
+    //   "packageName": "@bentley/imodeljs-editor-common",
+    //   "projectFolder": "../imodeljs/editor/common"
+    // },
+    // {
+    //   "packageName": "@bentley/imodeljs-editor-backend",
+    //   "projectFolder": "../imodeljs/editor/backend"
+    // },
+    // {
+    //   "packageName": "@bentley/imodeljs-editor-frontend",
+    //   "projectFolder": "../imodeljs/editor/frontend"
+    // },
     {
       "packageName": "@bentley/backend-itwin-client",
       "projectFolder": "../imodeljs/core/backend-itwin-client"
@@ -105,22 +105,22 @@
       "packageName": "@bentley/imodeljs-i18n",
       "projectFolder": "../imodeljs/core/i18n"
     },
-    {
-      "packageName": "@bentley/analytical-backend",
-      "projectFolder": "../imodeljs/domains/analytical/backend"
-    },
-    {
-      "packageName": "@bentley/linear-referencing-backend",
-      "projectFolder": "../imodeljs/domains/linear-referencing/backend"
-    },
-    {
-      "packageName": "@bentley/linear-referencing-common",
-      "projectFolder": "../imodeljs/domains/linear-referencing/common"
-    },
-    {
-      "packageName": "@bentley/physical-material-backend",
-      "projectFolder": "../imodeljs/domains/physical-material/backend"
-    },
+    // {
+    //   "packageName": "@bentley/analytical-backend",
+    //   "projectFolder": "../imodeljs/domains/analytical/backend"
+    // },
+    // {
+    //   "packageName": "@bentley/linear-referencing-backend",
+    //   "projectFolder": "../imodeljs/domains/linear-referencing/backend"
+    // },
+    // {
+    //   "packageName": "@bentley/linear-referencing-common",
+    //   "projectFolder": "../imodeljs/domains/linear-referencing/common"
+    // },
+    // {
+    //   "packageName": "@bentley/physical-material-backend",
+    //   "projectFolder": "../imodeljs/domains/physical-material/backend"
+    // },
     {
       "packageName": "@bentley/presentation-common",
       "projectFolder": "../imodeljs/presentation/common"
@@ -169,18 +169,18 @@
       "packageName": "@bentley/ecschema-metadata",
       "projectFolder": "../imodeljs/core/ecschema-metadata"
     },
-    {
-      "packageName": "@bentley/ecschema-locaters",
-      "projectFolder": "../imodeljs/core/ecschema-locaters"
-    },
-    {
-      "packageName": "@bentley/ecschema2ts",
-      "projectFolder": "../imodeljs/tools/ecschema2ts"
-    },
-    {
-      "packageName": "@bentley/ecschema-editing",
-      "projectFolder": "../imodeljs/core/ecschema-editing"
-    },
+    // {
+    //   "packageName": "@bentley/ecschema-locaters",
+    //   "projectFolder": "../imodeljs/core/ecschema-locaters"
+    // },
+    // {
+    //   "packageName": "@bentley/ecschema2ts",
+    //   "projectFolder": "../imodeljs/tools/ecschema2ts"
+    // },
+    // {
+    //   "packageName": "@bentley/ecschema-editing",
+    //   "projectFolder": "../imodeljs/core/ecschema-editing"
+    // },
     {
       "packageName": "@bentley/webpack-tools-core",
       "projectFolder": "../imodeljs/tools/webpack-core"
@@ -205,22 +205,22 @@
       "packageName": "@bentley/electron-manager",
       "projectFolder": "../imodeljs/core/electron-manager"
     },
-    {
-      "packageName": "@bentley/mobile-manager",
-      "projectFolder": "../imodeljs/core/mobile-manager"
-    },
+    // {
+    //   "packageName": "@bentley/mobile-manager",
+    //   "projectFolder": "../imodeljs/core/mobile-manager"
+    // },
     {
       "packageName": "@bentley/express-server",
       "projectFolder": "../imodeljs/core/express-server"
     },
-    {
-      "packageName": "@bentley/ecschema-rpcinterface-common",
-      "projectFolder": "../imodeljs/core/ecschema-rpc/common"
-    },
-    {
-      "packageName": "@bentley/ecschema-rpcinterface-impl",
-      "projectFolder": "../imodeljs/core/ecschema-rpc/impl"
-    },
+    // {
+    //   "packageName": "@bentley/ecschema-rpcinterface-common",
+    //   "projectFolder": "../imodeljs/core/ecschema-rpc/common"
+    // },
+    // {
+    //   "packageName": "@bentley/ecschema-rpcinterface-impl",
+    //   "projectFolder": "../imodeljs/core/ecschema-rpc/impl"
+    // },
     // {
     //   "packageName": "@bentley/ecschema-rpcinterface-tests",
     //   "projectFolder": "../imodeljs/full-stack-tests/ecschema-rpc-interface"
