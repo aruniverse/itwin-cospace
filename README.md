@@ -10,10 +10,11 @@ All the repos we want to connect will be a sibling to this repo, and it'll look 
 
 ```
     |-- some_parent_dir
-        |-- itwin_devspace
-        |-- imodeljs
-        |-- viewer
-        |-- viewer-components-react
+        |-- [itwin_devspace](https://github.com/aruniverse/itwin_devspace)
+        |-- [imodeljs](https://github.com/imodeljs/imodeljs)
+        |-- [viewer](https://github.com/iTwin/viewer)
+        |-- [viewer-components-react](https://github.com/iTwin/viewer-components-react)
+        |-- [auth-clients](https://github.com/iTwin/auth-clients)
 ```
 
 
@@ -28,7 +29,7 @@ I'd recommend having a different shell for each repo you're linking.
 git clone https://github.com/aruniverse/itwin_devspace.git
 ```
 
-
+#### imodeljs
 We'll use [git sparse-checkout](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/) to not pull in code we don't really care about in the core repo.
 
 ```bash
@@ -39,17 +40,27 @@ git sparse-checkout init --cone
 git sparse-checkout set clients common core/backend core/backend-itwin-client core/bentley core/common core/ecschema-metadata core/electron-manager core/express-server core/frontend core/frontend-devtools core/geometry core/hypermodeling core/i18n core/markup core/orbitgt core/quantity core/webgl-compatibility presentation tools ui
 ```
 
-The `itwin_devspace` repo provides patch file you can apply to help link packages together in the workspace
+The `itwin_devspace` repo provides patch files you can apply to help link packages together in the workspace
+
+#### viewer
 ```bash
 git clone -b 3.0 --single-branch https://github.com/iTwin/viewer.git
 cd viewer
 git apply < ../itwin_devspace/patches/itv.patch
 ```
 
+#### viewer-components-react
 ```bash
-git clone -b 3.0 --single-branch https://github.com/imodeljs/viewer-components-react.git
+git clone -b 3.0 --single-branch https://github.com/itwin/viewer-components-react.git
 cd viewer-components-react
 git apply < ../itwin_devspace/patches/vcr.patch
+```
+
+#### auth-clients
+```bash
+git clone https://github.com/itwin/auth-clients.git
+cd auth-clients
+git apply < ../itwin_devspace/patches/auth.patch
 ```
 
 Now that you have all the repos cloned together, you should run `rush update` and `rush build` in the itwin_devspace shell.
