@@ -333,9 +333,22 @@ index cdb6e39..5cd1718 100644
      "react-dom": "^17.0.2"
    },
 diff --git a/packages/modules/viewer-react/package.json b/packages/modules/viewer-react/package.json
-index cc85b1e..f1048a4 100644
+index cc85b1e..3646239 100644
 --- a/packages/modules/viewer-react/package.json
 +++ b/packages/modules/viewer-react/package.json
+@@ -40,9 +40,9 @@
+   ],
+   "dependencies": {
+     "@bentley/icons-generic-webfont": "^1.0.15",
+-    "@bentley/measure-tools-react": "^0.4.0",
+-    "@bentley/property-grid-react": "^2.2.1",
+-    "@bentley/tree-widget-react": "^1.4.3",
++    "@bentley/measure-tools-react": "workspace:*",
++    "@bentley/property-grid-react": "workspace:*",
++    "@bentley/tree-widget-react": "workspace:*",
+     "@itwin/error-handling-react": "1.0.2",
+     "@itwin/itwinui-react": "^1.12.0",
+     "@microsoft/applicationinsights-react-js": "2.3.1",
 @@ -51,28 +51,28 @@
      "react-spring": "^8.0.27"
    },
