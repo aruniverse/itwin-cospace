@@ -1,0 +1,86 @@
+diff --git a/packages/browser/package.json b/packages/browser/package.json
+index 117c5e7..40133f1 100644
+--- a/packages/browser/package.json
++++ b/packages/browser/package.json
+@@ -22,14 +22,14 @@
+     "url": "https://github.com/iTwin/auth-clients"
+   },
+   "dependencies": {
+-    "@itwin/core-bentley": "^3.0.0-dev.77",
+-    "@bentley/itwin-client": "^3.0.0-dev.77",
+-    "@itwin/core-common": "^3.0.0-dev.83",
++    "@itwin/core-bentley": "workspace:*",
++    "@bentley/itwin-client": "workspace:*",
++    "@itwin/core-common": "workspace:*",
+     "oidc-client": "^1.11.5"
+   },
+   "devDependencies": {
+-    "@itwin/build-tools": "^3.0.0-dev.77",
+-    "@itwin/eslint-plugin": "^3.0.0-dev.77",
++    "@itwin/build-tools": "workspace:*",
++    "@itwin/eslint-plugin": "workspace:*",
+     "@types/node": "^10.17.60",
+     "eslint": "^7.32.0",
+     "typescript": "~4.3.5"
+diff --git a/packages/electron/package.json b/packages/electron/package.json
+index 2654006..11ba75f 100644
+--- a/packages/electron/package.json
++++ b/packages/electron/package.json
+@@ -22,11 +22,11 @@
+     "url": "https://github.com/iTwin/auth-clients"
+   },
+   "dependencies": {
+-    "@itwin/core-bentley": "^3.0.0-dev.77",
+-    "@itwin/core-backend": "^3.0.0-dev.77",
+-    "@itwin/core-common": "^3.0.0-dev.77",
+-    "@bentley/itwin-client": "^3.0.0-dev.77",
+-    "@itwin/presentation-common": "^3.0.0-dev.77",
++    "@itwin/core-bentley": "workspace:*",
++    "@itwin/core-backend": "workspace:*",
++    "@itwin/core-common": "workspace:*",
++    "@bentley/itwin-client": "workspace:*",
++    "@itwin/presentation-common": "workspace:*",
+     "@openid/appauth": "^1.3.1",
+     "deep-assign": "^2.0.0",
+     "keytar": "^7.7.0",
+@@ -34,10 +34,10 @@
+     "username": "^5.1.0"
+   },
+   "devDependencies": {
+-    "@itwin/build-tools": "^3.0.0-dev.77",
+-    "@itwin/core-electron": "^3.0.0-dev.77",
+-    "@itwin/eslint-plugin": "^3.0.0-dev.77",
+-    "@bentley/itwin-client": "^3.0.0-dev.77",
++    "@itwin/build-tools": "workspace:*",
++    "@itwin/core-electron": "workspace:*",
++    "@itwin/eslint-plugin": "workspace:*",
++    "@bentley/itwin-client": "workspace:*",
+     "@types/deep-assign": "^0.1.1",
+     "electron": "^14.0.1",
+     "eslint": "^7.32.0",
+diff --git a/packages/service/package.json b/packages/service/package.json
+index 07bda4f..e56ab35 100644
+--- a/packages/service/package.json
++++ b/packages/service/package.json
+@@ -21,15 +21,15 @@
+     "url": "https://github.com/iTwin/auth-clients"
+   },
+   "dependencies": {
+-    "@bentley/itwin-client": "^3.0.0-dev.77",
+-    "@itwin/core-bentley": "^3.0.0-dev.77",
+-    "@itwin/core-common": "^3.0.0-dev.83",
++    "@bentley/itwin-client": "workspace:*",
++    "@itwin/core-bentley": "workspace:*",
++    "@itwin/core-common": "workspace:*",
+     "openid-client": "^4.7.4"
+   },
+   "devDependencies": {
+-    "@itwin/build-tools": "^3.0.0-dev.77",
+-    "@itwin/eslint-plugin": "^3.0.0-dev.77",
+-    "@itwin/oidc-signin-tool": "^3.0.0-dev.77",
++    "@itwin/build-tools": "workspace:*",
++    "@itwin/eslint-plugin": "workspace:*",
++    "@itwin/oidc-signin-tool": "workspace:*",
+     "@types/chai": "^4.2.22",
+     "@types/mocha": "^8.2.3",
+     "@types/sinon": "^9.0.0",
