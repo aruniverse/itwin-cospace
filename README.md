@@ -4,7 +4,7 @@ This repo provides an example of how to setup multiple repos together using rush
 
 ## Overview
 
-Clone this repo which will help setup a workspace to connect the imodeljs core repo along with the viewer and viewer-components-react repo.
+Clone this repo which will help setup a [vscode workspace](https://code.visualstudio.com/docs/editor/workspaces) to connect the imodeljs core repo along with the viewer and viewer-components-react repo.
 
 All the repos we want to connect will be a sibling to this repo, and it'll look like so:
 
@@ -18,9 +18,9 @@ All the repos we want to connect will be a sibling to this repo, and it'll look 
 ```
 
 
-We'll be taking advantage of [pnpm workspaces](https://pnpm.io/workspaces) to link the node_modules of all the repos in the workspace together. All of those dependencies will need to be defined in `itwin_devspace/rush.json`, and then all the dependencies that are in the workspace needs to be linked together by setting the version to `"workspace:*"` in the `package.json` of every package defined in the `rush.json`.
+We'll be taking advantage of [pnpm workspaces](https://pnpm.io/workspaces) to link the node_modules of all the repos in the workspace together. All of the dependencies will need to be defined in `itwin_devspace/rush.json`, and then all the dependencies that are in the workspace needs to be linked together by setting their version to `"workspace:*"` in the `package.json` of every package defined in the `rush.json`.
 
-You should be able to expand on this and more repos to the workspace as long as you update the `rush.json` and the `package.json` accordingly.
+You should be able to add more repos to the workspace as long as you update the `rush.json` and the `package.json`'s accordingly.
 
 ## Steps
 I'd recommend having a different shell for each repo you're linking.
@@ -28,6 +28,8 @@ I'd recommend having a different shell for each repo you're linking.
 ```bash
 git clone https://github.com/aruniverse/itwin_devspace.git
 ```
+
+In your VSCode instance, open workspace from file, and select the `itv_vcr_imjs.code-workspace` file.
 
 #### imodeljs
 We'll use [git sparse-checkout](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/) to not pull in code we don't really care about in the core repo.
