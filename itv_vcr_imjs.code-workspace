@@ -25,6 +25,10 @@
       "**/bower_components": true,
       "**/.nyc_output": true,
       "**/.rush": true
+    },
+    "files.exclude": {
+      "**/node_modules": false,
+      "**/lib": false
     }
   }
 }

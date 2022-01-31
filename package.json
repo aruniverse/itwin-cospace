@@ -10,5 +10,22 @@
   "devDependencies": {
     "turbo": "latest"
   },
-  "packageManager": "pnpm@6.29.1"
+  "packageManager": "pnpm@6.29.1",
+  "//note": "run `pnpm ls -r --depth -1` to see all pkgs in the workspace, then for each one set the override to `workspace:*`",
+  "pnpm": {
+    "overrides": {
+      "@itwin/core-bentley": "workspace:*",
+      "@itwin/web-viewer-react": "workspace:*",
+      "@itwin/desktop-viewer-react": "workspace:*",
+      "@itwin/viewer-react": "workspace:*",
+      "@itwin/error-handling-react": "workspace:*",
+      "@itwin/measure-tools-react": "workspace:*",
+      "@itwin/tree-widget-react": "workspace:*",
+      "@itwin/property-grid-react": "workspace:*",
+      "@itwin/browser-authorization": "workspace:*",
+      "@itwin/electron-authorization": "workspace:*",
+      "@itwin/service-authorization": "workspace:*",
+      "@itwin/oidc-signin-tool": "workspace:*"
+    }
+  }
 }
