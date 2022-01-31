@@ -5,16 +5,17 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "build:lage": "lage build"
   },
   "devDependencies": {
+    "lage": "latest",
     "turbo": "latest"
   },
   "packageManager": "pnpm@6.29.1",
   "//note": "run `pnpm ls -r --depth -1` to see all pkgs in the workspace, then for each one set the override to `workspace:*`",
   "pnpm": {
     "overrides": {
-      "@itwin/core-bentley": "workspace:*",
       "@itwin/web-viewer-react": "workspace:*",
       "@itwin/desktop-viewer-react": "workspace:*",
       "@itwin/viewer-react": "workspace:*",
