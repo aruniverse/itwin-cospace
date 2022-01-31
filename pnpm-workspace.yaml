@@ -1,0 +1,10 @@
+packages:
+  - "../imodeljs/core/*"
+  - "../imodeljs/presentation/*"
+  - "../imodeljs/tools/*"
+  - "../imodeljs/ui/*"
+  - "../viewer/packages/apps/web-viewer-test/*"
+  - "../viewer/packages/apps/desktop-viewer-test/*"
+  - "../viewer/packages/modules/*"
+  - "../viewer-components-react/packages/itwin/*"
+  - "../auth-clients/packages/*"
