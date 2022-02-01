@@ -5,10 +5,18 @@ packages:
   - '../imodeljs/tools/*'
   - '../imodeljs/ui/*'
   # https://github.com/iTwin/viewer
-  - '../viewer/packages/apps/web-viewer-test/*'
-  - '../viewer/packages/apps/desktop-viewer-test/*'
+  - '../viewer/packages/apps/web-viewer-test'
+  - '../viewer/packages/apps/desktop-viewer-test'
   - '../viewer/packages/modules/*'
   # https://github.com/iTwin/viewer-components-react
   - '../viewer-components-react/packages/itwin/*'
   # https://github.com/iTwin/auth-clients
   - '../auth-clients/packages/*'
+  # https://github.com/iTwin/imodels-clients
+  - '../imodels-clients/clients/*'
+  # - '../imodels-clients/itwin-platform-access/*'
+  # "@itwin/imodels-access-backend": "workspace:*",
+  - '../imodels-clients/itwin-platform-access/imodels-access-frontend'
+  - '../imodels-clients/utils/imodels-client-common-config'
+  # https://github.com/iTwin/reality-data-client
+  - '../reality-data-client'

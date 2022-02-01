@@ -4,12 +4,17 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "build:lage": "lage build"
+    "build": "lage build",
+    "build:clean": "lage build --no-cache",
+    "build:clean:profile": "lage build --no-cache --profile",
+    "clean": "lage clean && rimraf node_modules",
+    "build:turbo": "turbo run build",
+    "clean:turbo": "turbo run clean && rimraf node_modules",
+    "list-pkgs": "pnpm ls -r --depth -1"
   },
   "devDependencies": {
     "lage": "latest",
+    "rimraf": "^3.0.2",
     "turbo": "latest"
   },
   "packageManager": "pnpm@6.29.1",
@@ -67,7 +72,12 @@
       "@itwin/browser-authorization": "workspace:*",
       "@itwin/electron-authorization": "workspace:*",
       "@itwin/service-authorization": "workspace:*",
-      "@itwin/oidc-signin-tool": "workspace:*"
+      "@itwin/oidc-signin-tool": "workspace:*",
+      "@itwin/imodels-client-authoring": "workspace:*",
+      "@itwin/imodels-client-management": "workspace:*",
+      "@itwin/imodels-access-frontend": "workspace:*",
+      "@itwin/imodels-client-common-config": "workspace:*",
+      "@itwin/reality-data-client": "workspace:*"
     }
   }
 }
