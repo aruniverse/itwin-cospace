@@ -1,0 +1,15 @@
+{
+  "baseBranch": "origin/master",
+  "npmClient": "pnpm",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["lib/**", "dist/**"]
+    },
+    "test": {
+      "dependsOn": ["lint", "build"]
+    },
+    "lint": {},
+    "clean": {}
+  }
+}

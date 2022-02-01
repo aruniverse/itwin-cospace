@@ -1,4 +1,2 @@
-# Rush temporary files
-common/temp/
-**/.rush/temp/
-/**/.rush
+node_modules/
+.turbo

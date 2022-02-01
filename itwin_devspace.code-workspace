@@ -4,11 +4,11 @@
       "path": "."
     },
     {
-      "name": "imjs",
+      "name": "itwinjs core",
       "path": "..\\imodeljs"
     },
     {
-      "name": "itv",
+      "name": "itwin-viewer",
       "path": "..\\viewer"
     },
     {
@@ -17,6 +17,12 @@
     },
     {
       "path": "..\\auth-clients"
+    },
+    {
+      "path": "..\\imodels-clients"
+    },
+    {
+      "path": "..\\reality-data-client"
     }
   ],
   "settings": {
@@ -25,6 +31,10 @@
       "**/bower_components": true,
       "**/.nyc_output": true,
       "**/.rush": true
+    },
+    "files.exclude": {
+      "**/node_modules": false,
+      "**/lib": false
     }
   }
 }
