@@ -75,6 +75,7 @@
       "@itwin/oidc-signin-tool": "workspace:*",
       "@itwin/imodels-client-authoring": "workspace:*",
       "@itwin/imodels-client-management": "workspace:*",
+      "@itwin/imodels-access-backend": "workspace:*",
       "@itwin/imodels-access-frontend": "workspace:*",
       "@itwin/imodels-client-common-config": "workspace:*",
       "@itwin/reality-data-client": "workspace:*"

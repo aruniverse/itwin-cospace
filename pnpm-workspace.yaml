@@ -19,9 +19,7 @@ packages:
 
   # https://github.com/iTwin/imodels-clients
   - '../imodels-clients/clients/*'
-  # - '../imodels-clients/itwin-platform-access/*'
-  # "@itwin/imodels-access-backend": "workspace:*",
-  - '../imodels-clients/itwin-platform-access/imodels-access-frontend'
+  - '../imodels-clients/itwin-platform-access/*'
   - '../imodels-clients/utils/imodels-client-common-config'
   
   # https://github.com/iTwin/reality-data-client
