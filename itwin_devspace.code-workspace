@@ -23,6 +23,10 @@
     },
     {
       "path": "..\\reality-data-client"
+    },
+    {
+      "name": "cra",
+      "path": "..\\create-react-app\\packages\\react-scripts"
     }
   ],
   "settings": {

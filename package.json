@@ -10,7 +10,9 @@
     "clean": "lage clean && rimraf node_modules",
     "build:turbo": "turbo run build",
     "clean:turbo": "turbo run clean && rimraf node_modules",
-    "list-pkgs": "pnpm ls -r --depth -1"
+    "list-pkgs": "pnpm ls -r --depth -1",
+    "start:web-viewer": "pnpm start --filter @itwin/web-viewer-test",
+    "start:desktop-viewer": "pnpm start --filter @itwin/desktop-viewer-test"
   },
   "devDependencies": {
     "lage": "latest",
@@ -78,7 +80,8 @@
       "@itwin/imodels-access-backend": "workspace:*",
       "@itwin/imodels-access-frontend": "workspace:*",
       "@itwin/imodels-client-common-config": "workspace:*",
-      "@itwin/reality-data-client": "workspace:*"
+      "@itwin/reality-data-client": "workspace:*",
+      "@bentley/react-scripts": "workspace:*"
     }
   }
 }

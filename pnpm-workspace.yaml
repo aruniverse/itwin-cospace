@@ -24,3 +24,6 @@ packages:
   
   # https://github.com/iTwin/reality-data-client
   - '../reality-data-client'
+
+  # https://github.com/imodeljs/create-react-app
+  - '../create-react-app/packages/react-scripts'
