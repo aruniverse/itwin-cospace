@@ -3,6 +3,7 @@ module.exports = {
     build: ["^build"],
     test: ["build"],
     lint: [],
-    clean: []
+    clean: [],
+    "build:ci": ["^build:ci"],
   },
 };

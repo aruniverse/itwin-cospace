@@ -1,29 +1,50 @@
 packages:
+
+  - "repos/test-viewer"
+
   # https://github.com/iTwin/itwinjs-core
-  - '../imodeljs/core/*'
-  - '../imodeljs/presentation/*'
-  - '../imodeljs/tools/*'
-  - '../imodeljs/ui/*'
+  - "repos/itwinjs-core/core/*"
+  - "repos/itwinjs-core/presentation/*"
+  - "repos/itwinjs-core/tools/*"
+  - "repos/itwinjs-core/ui/*"
+  # - "repos/itwinjs-core/test-apps/display-performance-test-app"
 
   # https://github.com/iTwin/viewer
-  - '../viewer/common/scripts'
-  - '../viewer/packages/apps/web-viewer-test'
-  - '../viewer/packages/apps/desktop-viewer-test'
-  - '../viewer/packages/modules/*'
+  - "repos/viewer/common/scripts"
+  - "repos/viewer/packages/apps/web-viewer-test"
+  - "repos/viewer/packages/apps/desktop-viewer-test"
+  - "repos/viewer/packages/modules/*"
+  - "!repos/viewer/packages/modules/cra-*"
+
+    # https://github.com/iTwin/viewer-sample-typescript
+  - "repos/viewer-sample-typescript/common/scripts"
+  - "repos/viewer-sample-typescript/packages/apps"
+  - "repos/viewer-sample-typescript/packages/extensions/*"
 
   # https://github.com/iTwin/viewer-components-react
-  - '../viewer-components-react/packages/itwin/*'
+  - 'repos/viewer-components-react/packages/itwin/measure-tools'
+  - 'repos/viewer-components-react/packages/itwin/property-grid'
+  - 'repos/viewer-components-react/packages/itwin/tree-widget'
+  - 'repos/viewer-components-react/packages/itwin/geo-tools'
+  - 'repos/viewer-components-react/packages/itwin/imodel-react-hooks'
 
-  # https://github.com/iTwin/auth-clients
-  - '../auth-clients/packages/*'
+  # # https://github.com/iTwin/auth-clients
+  # - 'repos/auth-clients/packages/*'
 
-  # https://github.com/iTwin/imodels-clients
-  - '../imodels-clients/clients/*'
-  - '../imodels-clients/itwin-platform-access/*'
-  - '../imodels-clients/utils/imodels-client-common-config'
-  
+  # # https://github.com/iTwin/imodels-clients
+  # - 'repos/imodels-clients/clients/*'
+  # - 'repos/imodels-clients/itwin-platform-access/*'
+  # - 'repos/imodels-clients/utils/imodels-client-common-config'
+
   # https://github.com/iTwin/reality-data-client
-  - '../reality-data-client'
+  # - 'repos/reality-data-client'
+
+  # # https://github.com/iTwin/projects-client
+  # - 'repos/projects-client'
 
   # https://github.com/imodeljs/create-react-app
-  - '../create-react-app/packages/react-scripts'
+  - 'repos/create-react-app/packages/react-scripts'
+
+  # # https://github.com/iTwin/itwinjs-internal
+  # - 'repos/itwinjs-internal/clients/embed-api-handler'
+  # - 'repos/itwinjs-internal/tools/eslint-plugin'
