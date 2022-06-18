@@ -2,3 +2,7 @@ node_modules/
 .turbo
 
 .pnpm-debug.log
+
+pnpm-lock.yaml
+repos/
+!repos/test-viewer

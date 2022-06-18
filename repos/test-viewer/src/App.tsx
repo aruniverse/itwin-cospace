@@ -3,106 +3,106 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 
-import { FillCentered } from "@itwin/core-react";
-import { SvgIModelLoader } from "@itwin/itwinui-illustrations-react";
-import { ConnectedViewerProps, useWebViewerInitializer } from "@itwin/web-viewer-react";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import { TokenServerAuthClient } from "./TokenServerClient";
-import { WrappedViewer } from "./WrappedViewer";
-import { history } from "./history";
-import "./Debug";
 
 import { TreeWidget } from "@itwin/tree-widget-react";
 import { MeasureTools } from "@itwin/measure-tools-react";
 import { PropertyGridManager } from "@itwin/property-grid-react";
-import { GeoTools } from "@itwin/geo-tools-react";
-import { ALL_MODELS } from "./IModelPicker";
-
-export type Envs = "" | "qa-" | "dev-";
+import { Viewer, ViewerPerformance } from "@itwin/web-viewer-react";
+import type { ScreenViewport } from "@itwin/core-frontend";
+import { FitViewTool, IModelApp, StandardViewId } from "@itwin/core-frontend";
+import {
+  StandardContentToolsProvider,
+  StandardNavigationToolsProvider,
+  StandardStatusbarItemsProvider,
+} from "@itwin/appui-react";
+import { TreeWidgetUiItemsProvider } from "@itwin/tree-widget-react";
+import { MeasureToolsUiItemsProvider } from "@itwin/measure-tools-react";
+import { PropertyGridUiItemsProvider } from "@itwin/property-grid-react";
 
 const App: React.FC = () => {
   const [accessToken, setAccessToken] = useState("");
-  const [env, setEnv] = useState(process.env.IMJS_URL_PREFIX);
-  const authClient = useMemo(() => new TokenServerAuthClient(env), [env]);
+  const authClient = useMemo(() => new TokenServerAuthClient(), []);
   useEffect(() => {
     const init = async () => {
       await authClient.initialize();
       const token = await authClient.getAccessToken();
       setAccessToken(token);
-    }
+    };
     init().catch(console.error);
   }, [authClient]);
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const _env = urlParams.get("env");
-    if (_env) {
-      setEnv(`${_env as string}-`);
-      if (_env !== "prod") {
-        (globalThis as any).IMJS_URL_PREFIX = `${_env as string}-`;
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (env) {
-      history.push(`?env=${env.substring(0, env.length - 1)}`);
-    }
-  }, [env]);
-
-  const [connectedViewerProps, setConnectedViewerProps] = useState<ConnectedViewerProps>(ALL_MODELS.get(env ?? "")!.get("Retail Building")!);
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const iTwinId = urlParams.get("iTwinId") ?? "";
-    const iModelId = urlParams.get("iModelId") ?? "";
-    const changeSetId = urlParams.get("changeSetId") ?? "";
-    if (iTwinId && iModelId) {
-      setConnectedViewerProps({
-        iTwinId,
-        iModelId,
-        changeSetId
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    if (connectedViewerProps) {
-      let url = `?iTwinId=${connectedViewerProps.iTwinId}&iModelId=${connectedViewerProps.iModelId}`;
-      if (connectedViewerProps.changeSetId) {
-        url += `&changeSetId=${connectedViewerProps.changeSetId}`;
-      }
-      if (env) {
-        url += `&env=${env.substring(0, env.length - 1)}`;
-      }
-      history.push(url);
-    }
-  }, [connectedViewerProps, env]);
 
   const onIModelAppInit = useCallback(async () => {
     await TreeWidget.initialize();
     await PropertyGridManager.initialize();
     await MeasureTools.startup();
-    await GeoTools.initialize();
   }, []);
 
-  // need to initialize IModelApp earlier so we can wrap <Viewer /> with <IModelJsViewProvider />
-  useWebViewerInitializer({
-    ...connectedViewerProps,
-    authClient,
-    enablePerformanceMonitors: false,
-    onIModelAppInit,
-  });
+  const viewConfiguration = useCallback((viewPort: ScreenViewport) => {
+    // default execute the fitview tool and use the iso standard view after tile trees are loaded
+    const tileTreesLoaded = () => {
+      return new Promise((resolve, reject) => {
+        const start = new Date();
+        const intvl = setInterval(() => {
+          if (viewPort.areAllTileTreesLoaded) {
+            ViewerPerformance.addMark("TilesLoaded");
+            void ViewerPerformance.addAndLogMeasure(
+              "TileTreesLoaded",
+              "ViewerStarting",
+              "TilesLoaded",
+              viewPort.numReadyTiles
+            );
+            clearInterval(intvl);
+            resolve(true);
+          }
+          const now = new Date();
+          // after 20 seconds, stop waiting and fit the view
+          if (now.getTime() - start.getTime() > 20000) {
+            reject();
+          }
+        }, 100);
+      });
+    };
+
+    tileTreesLoaded().finally(() => {
+      void IModelApp.tools.run(FitViewTool.toolId, viewPort, true, false);
+      viewPort.view.setStandardRotation(StandardViewId.Iso);
+    });
+  }, []);
+
+  const viewCreatorOptions = useMemo(
+    () => ({ viewportConfigurer: viewConfiguration }),
+    [viewConfiguration]
+  );
 
   return (
     <div style={{ height: "100vh" }}>
-      {!accessToken && (
-        <FillCentered>
-          <SvgIModelLoader style={{ height: "64px", width: "64px" }} />
-        </FillCentered>
+      {accessToken && (
+        <Viewer
+          iTwinId={"c5d4dd3a-597a-4c88-918c-f1aa3588312f"}
+          iModelId={"11977591-6a15-4f0e-aa10-1c6afb066bc7"}
+          authClient={authClient}
+          onIModelAppInit={onIModelAppInit}
+          viewCreatorOptions={viewCreatorOptions}
+          enablePerformanceMonitors={false}
+          uiProviders={[
+            new StandardNavigationToolsProvider("DefaultNavigationTools"),
+            new StandardContentToolsProvider("DefaultContentTools"),
+            new StandardStatusbarItemsProvider("DefaultStatusbar"),
+            new TreeWidgetUiItemsProvider({
+              hideTrees: {
+                spatialTree: true,
+              },
+            }),
+            new PropertyGridUiItemsProvider({
+              enableCopyingPropertyText: true,
+            }),
+            new MeasureToolsUiItemsProvider(),
+          ]}
+        />
       )}
-      {accessToken && <WrappedViewer authClient={authClient} {...connectedViewerProps} />}
     </div>
   );
 };

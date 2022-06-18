@@ -7,10 +7,8 @@ export class TokenServerAuthClient implements ViewerAuthorizationClient {
   >();
   protected _accessToken?: AccessToken;
 
-  constructor(private _envPrefix = "prod-") {}
-
   public async initialize() {
-    const tokenUrl = `https://${this._envPrefix}imodeldeveloperservices-eus.azurewebsites.net/api/v0/sampleShowcaseUser/devUser`;
+    const tokenUrl = `https://prod-imodeldeveloperservices-eus.azurewebsites.net/api/v0/sampleShowcaseUser/devUser`;
 
     try {
       const res = await fetch(tokenUrl);

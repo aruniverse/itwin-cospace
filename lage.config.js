@@ -4,6 +4,5 @@ module.exports = {
     test: ["build"],
     lint: [],
     clean: [],
-    "build:ci": ["^build:ci"],
   },
 };

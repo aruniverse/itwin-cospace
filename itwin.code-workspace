@@ -10,39 +10,8 @@
       "path": "repos\\viewer"
     },
     {
-      "name": "abg-viewer",
       "path": "repos\\test-viewer"
     },
-    {
-      "name": "ts viewer",
-      "path": "repos\\viewer-sample-typescript"
-    },
-    {
-      "name": "vcr",
-      "path": "repos\\viewer-components-react"
-    },
-    {
-      "path": "repos\\auth-clients"
-    },
-    {
-      "path": "repos\\imodels-clients"
-    },
-    {
-      "path": "repos\\projects-client"
-    },
-    {
-      "path": "repos\\reality-data-client"
-    },
-    {
-      "name": "cra",
-      "path": "repos\\create-react-app\\packages\\react-scripts"
-    },
-    // {
-    //   "path": "repos\\itwinjs-internal"
-    // },
-    // {
-    //   "path": "repos\\hatch-ext"
-    // },
   ],
   "settings": {
     "search.exclude": {

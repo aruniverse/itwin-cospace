@@ -1,0 +1,91 @@
+diff --git a/.gitignore b/.gitignore
+index 011c1b9159..44bdaeac70 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -53,3 +53,4 @@ common/autoinstallers/*/.npmrc
+ common/api/summary/summary.exports.csv
+ 
+ debug.log
++.turbo/
+\ No newline at end of file
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+index 9690735421..bab57a5464 100644
+--- a/.vscode/settings.json
++++ b/.vscode/settings.json
+@@ -2,7 +2,7 @@
+ {
+   "editor.tabSize": 2,
+   "editor.insertSpaces": true,
+-  "editor.formatOnSave": true,
++  // "editor.formatOnSave": true,
+   "search.exclude": {
+     "**/node_modules": true,
+     "**/bower_components": true,
+diff --git a/core/ecschema-metadata/src/test/Metadata/Property.test.ts b/core/ecschema-metadata/src/test/Metadata/Property.test.ts
+index 29c740e2a7..5236e287e0 100644
+--- a/core/ecschema-metadata/src/test/Metadata/Property.test.ts
++++ b/core/ecschema-metadata/src/test/Metadata/Property.test.ts
+@@ -944,14 +944,14 @@ describe("PrimitiveProperty", () => {
+       testProperty.fromJSONSync(propertyJson);
+       const koq = testProperty.getKindOfQuantitySync();
+       assert(koq !== undefined);
+-      assert.strictEqual(koq.name, "MyKindOfQuantity");
++      assert.strictEqual(koq!.name, "MyKindOfQuantity");
+     });
+ 
+     it("Should load KindOfQuantity", async () => {
+       await testProperty.fromJSON(propertyJson);
+       const koq = await testProperty.kindOfQuantity;
+       assert(koq !== undefined);
+-      assert.strictEqual(koq.name, "MyKindOfQuantity");
++      assert.strictEqual(koq!.name, "MyKindOfQuantity");
+     });
+   });
+ 
+@@ -980,14 +980,14 @@ describe("PrimitiveProperty", () => {
+       testProperty.fromJSONSync(propertyJson);
+       const cat = testProperty.getCategorySync();
+       assert(cat !== undefined);
+-      assert.strictEqual(cat.name, "MyCategory");
++      assert.strictEqual(cat!.name, "MyCategory");
+     });
+ 
+     it("Should load PropertyCategory", async () => {
+       await testProperty.fromJSON(propertyJson);
+       const cat = await testProperty.category;
+       assert(cat !== undefined);
+-      assert.strictEqual(cat.name, "MyCategory");
++      assert.strictEqual(cat!.name, "MyCategory");
+     });
+   });
+ 
+diff --git a/core/frontend/src/test/QuantityFormatter.test.ts b/core/frontend/src/test/QuantityFormatter.test.ts
+index 9d7ab3c021..63568d8cf7 100644
+--- a/core/frontend/src/test/QuantityFormatter.test.ts
++++ b/core/frontend/src/test/QuantityFormatter.test.ts
+@@ -177,8 +177,8 @@ describe("Quantity formatter", async () => {
+     quantityFormatter.addAlternateLabels("Units.FT", "shoe", "sock");
+     const alternateLabels = quantityFormatter.alternateUnitLabelsProvider.getAlternateUnitLabels({ name: "Units.FT" } as UnitProps);
+     assert(!!alternateLabels);
+-    assert(alternateLabels.includes("shoe"));
+-    assert(alternateLabels.includes("sock"));
++    assert(alternateLabels!.includes("shoe"));
++    assert(alternateLabels!.includes("sock"));
+     const overrideImperialParserSpec = await quantityFormatter.getParserSpecByQuantityType(QuantityType.Length, true);
+     const overrideValueInMeters1 = quantityFormatter.parseToQuantityValue(`48"`, overrideImperialParserSpec);
+     const overrideValueInMeters2 = quantityFormatter.parseToQuantityValue(`48 in`, overrideImperialParserSpec);
+diff --git a/core/frontend/src/test/render/webgl/Texture.test.ts b/core/frontend/src/test/render/webgl/Texture.test.ts
+index 27d72a8458..45cbcf592a 100644
+--- a/core/frontend/src/test/render/webgl/Texture.test.ts
++++ b/core/frontend/src/test/render/webgl/Texture.test.ts
+@@ -93,8 +93,8 @@ describe("Texture tests", () => {
+     assert(undefined !== image);
+     const imageTexture = TextureHandle.createForImage(image, RenderTexture.Type.Normal);
+     assert(undefined !== imageTexture);
+-    expect(imageTexture.width).to.equal(4);
+-    expect(imageTexture.height).to.equal(4);
++    expect(imageTexture!.width).to.equal(4);
++    expect(imageTexture!.height).to.equal(4);
+   });
+ });
+ 
