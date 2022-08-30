@@ -4,44 +4,42 @@
       "path": "."
     },
     {
-      "path": "repos\\itwinjs-core"
+      "path": "repos/itwinjs-core"
     },
     {
-      "path": "repos\\viewer"
+      "path": "repos/viewer"
     },
     {
       "name": "abg-viewer",
-      "path": "repos\\test-viewer"
-    },
-    {
-      "name": "ts viewer",
-      "path": "repos\\viewer-sample-typescript"
-    },
-    {
-      "name": "vcr",
-      "path": "repos\\viewer-components-react"
-    },
-    {
-      "path": "repos\\auth-clients"
-    },
-    {
-      "path": "repos\\imodels-clients"
-    },
-    {
-      "path": "repos\\projects-client"
-    },
-    {
-      "path": "repos\\reality-data-client"
-    },
-    {
-      "name": "cra",
-      "path": "repos\\create-react-app\\packages\\react-scripts"
+      "path": "repos/test-viewer"
     },
     // {
-    //   "path": "repos\\itwinjs-internal"
+    //   "name": "vcr-viewer",
+    //   "path": "repos/vcr-viewer"
     // },
     // {
-    //   "path": "repos\\hatch-ext"
+    //   "name": "ts viewer",
+    //   "path": "repos/viewer-sample-typescript"
+    // },
+    // {
+    //   "name": "vcr",
+    //   "path": "repos/viewer-components-react"
+    // },
+    // {
+    //   "path": "repos/auth-clients"
+    // },
+    // {
+    //   "path": "repos/imodels-clients"
+    // },
+    // {
+    //   "path": "repos/projects-client"
+    // },
+    // {
+    //   "path": "repos/reality-data-client"
+    // },
+    // {
+    //   "name": "cra",
+    //   "path": "repos/create-react-app/packages/react-scripts"
     // },
   ],
   "settings": {
@@ -51,6 +49,7 @@
     },
     "files.exclude": {
       "**/lib": false,
+      "**/build": false,
       "**/node_modules": false,
       "repos/": false
     }

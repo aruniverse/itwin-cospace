@@ -7,21 +7,22 @@
     "build": "lage build",
     "build:clean": "lage build --no-cache",
     "build:profile": "lage build --no-cache --profile",
-    "clean": "lage clean --no-cache && cospace purge && pnpm i -w cospace",
+    "clean": "lage clean && cospace purge && pnpm i -w cospace",
     "setOverrides": "cospace override",
-    "start:web": "pnpm start --filter @itwin/web-viewer-test",
-    "start:desktop": "pnpm start --filter @itwin/desktop-viewer-test",
-    "start:ts": "pnpm start --filter @itwin/typescript-viewer-sample",
-    "start:abg": "pnpm start --filter @aruniverse/viewer"
+    "start:web": "pnpm --filter @itwin/web-viewer-test start",
+    "start:desktop": "pnpm --filter @itwin/desktop-viewer-test start",
+    "start:ts": "pnpm --filter @itwin/typescript-viewer-sample start",
+    "start:abg": "pnpm --filter @aruniverse/viewer start",
+    "start:vcr": "pnpm --filter vcr-viewer start",
+    "start:uita": "pnpm --filter ui-test-app start"
   },
-  "packageManager": "pnpm@6.32.3",
+  "packageManager": "pnpm@7.9.0",
   "devDependencies": {
-    "cospace": "^0.4.3",
-    "lage": "1.5.1"
+    "cospace": "^0.4.5",
+    "lage": "^1.7.9"
   },
   "pnpm": {
     "overrides": {
-      "@bentley/react-scripts": "workspace:*",
       "@itwin/appui-abstract": "workspace:*",
       "@itwin/appui-layout-react": "workspace:*",
       "@itwin/appui-react": "workspace:*",
@@ -45,34 +46,28 @@
       "@itwin/core-telemetry": "workspace:*",
       "@itwin/core-transformer": "workspace:*",
       "@itwin/core-webpack-tools": "workspace:*",
-      "@itwin/desktop-viewer-react": "workspace:*",
       "@itwin/ecschema-editing": "workspace:*",
       "@itwin/ecschema-locaters": "workspace:*",
       "@itwin/ecschema-metadata": "workspace:*",
+      "@itwin/ecschema-rpcinterface-common": "workspace:*",
+      "@itwin/ecschema-rpcinterface-impl": "workspace:*",
       "@itwin/ecschema2ts": "workspace:*",
-      "@itwin/error-handling-react": "workspace:*",
       "@itwin/eslint-plugin": "workspace:*",
       "@itwin/express-server": "workspace:*",
       "@itwin/frontend-devtools": "workspace:*",
-      "@itwin/geo-tools-react": "workspace:*",
       "@itwin/hypermodeling-frontend": "workspace:*",
       "@itwin/imodel-components-react": "workspace:*",
-      "@itwin/imodel-react-hooks": "workspace:*",
-      "@itwin/measure-tools-react": "workspace:*",
       "@itwin/perf-tools": "workspace:*",
       "@itwin/presentation-backend": "workspace:*",
       "@itwin/presentation-common": "workspace:*",
       "@itwin/presentation-components": "workspace:*",
       "@itwin/presentation-frontend": "workspace:*",
+      "@itwin/presentation-opentelemetry": "workspace:*",
       "@itwin/presentation-testing": "workspace:*",
-      "@itwin/property-grid-react": "workspace:*",
-      "@itwin/tree-widget-react": "workspace:*",
       "@itwin/viewer-react": "workspace:*",
       "@itwin/web-viewer-react": "workspace:*",
       "@itwin/webgl-compatibility": "workspace:*",
       "internal-tools": "workspace:*"
-    },
-    "prefer-workspace-packages": true,
-    "link-workspace-packages": "deep"
+    }
   }
 }

@@ -1,32 +1,42 @@
 packages:
 
   - "repos/test-viewer"
-
+  # - "repos/vcr-viewer"
+  
+  # git@github.com:iTwin/itwinjs-core.git
   # https://github.com/iTwin/itwinjs-core
-  - "repos/itwinjs-core/core/*"
+  # - "repos/itwinjs-core/clients/imodelhub"
+  - "repos/itwinjs-core/core/**"
   - "repos/itwinjs-core/presentation/*"
   - "repos/itwinjs-core/tools/*"
   - "repos/itwinjs-core/ui/*"
+  # - "repos/itwinjs-core/test-apps/display-test-app"
   # - "repos/itwinjs-core/test-apps/display-performance-test-app"
+  # - "repos/itwinjs-core/test-apps/ui-test-app"
+  # - "repos/itwinjs-core/extensions/*"
+  # - "repos/itwinjs-core/editor/*"
+  # - "repos/itwinjs-core/test-apps/ui-items-providers-test"
 
   # https://github.com/iTwin/viewer
   - "repos/viewer/common/scripts"
-  - "repos/viewer/packages/apps/web-viewer-test"
-  - "repos/viewer/packages/apps/desktop-viewer-test"
-  - "repos/viewer/packages/modules/*"
-  - "!repos/viewer/packages/modules/cra-*"
+  # - "repos/viewer/packages/apps/web-viewer-test"
+  # - "repos/viewer/packages/apps/desktop-viewer-test"
+  - "repos/viewer/packages/modules/viewer-react"
+  - "repos/viewer/packages/modules/web-viewer-react"
+  # - "repos/viewer/packages/modules/desktop-viewer-react"
+  # - "!repos/viewer/packages/modules/cra-*"
 
-    # https://github.com/iTwin/viewer-sample-typescript
-  - "repos/viewer-sample-typescript/common/scripts"
-  - "repos/viewer-sample-typescript/packages/apps"
-  - "repos/viewer-sample-typescript/packages/extensions/*"
+  #   # https://github.com/iTwin/viewer-sample-typescript
+  # - "repos/viewer-sample-typescript/common/scripts"
+  # - "repos/viewer-sample-typescript/packages/apps"
+  # - "repos/viewer-sample-typescript/packages/extensions/*"
 
-  # https://github.com/iTwin/viewer-components-react
-  - 'repos/viewer-components-react/packages/itwin/measure-tools'
-  - 'repos/viewer-components-react/packages/itwin/property-grid'
-  - 'repos/viewer-components-react/packages/itwin/tree-widget'
-  - 'repos/viewer-components-react/packages/itwin/geo-tools'
-  - 'repos/viewer-components-react/packages/itwin/imodel-react-hooks'
+  # # https://github.com/iTwin/viewer-components-react
+  # - 'repos/viewer-components-react/packages/itwin/measure-tools'
+  # - 'repos/viewer-components-react/packages/itwin/property-grid'
+  # - 'repos/viewer-components-react/packages/itwin/tree-widget'
+  # - 'repos/viewer-components-react/packages/itwin/geo-tools'
+  # - 'repos/viewer-components-react/packages/itwin/imodel-react-hooks'
 
   # # https://github.com/iTwin/auth-clients
   # - 'repos/auth-clients/packages/*'
@@ -43,8 +53,4 @@ packages:
   # - 'repos/projects-client'
 
   # https://github.com/imodeljs/create-react-app
-  - 'repos/create-react-app/packages/react-scripts'
-
-  # # https://github.com/iTwin/itwinjs-internal
-  # - 'repos/itwinjs-internal/clients/embed-api-handler'
-  # - 'repos/itwinjs-internal/tools/eslint-plugin'
+  # - 'repos/create-react-app/packages/react-scripts'

@@ -2,3 +2,8 @@ node_modules/
 .turbo
 
 .pnpm-debug.log
+
+.DS_Store
+
+repos/
+!repos/test-viewer
