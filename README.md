@@ -20,6 +20,7 @@ This repo uses [CoSpace](https://github.com/aruniverse/cospace) to setup a conve
       ```
    4. clone any additional repos you want to link together
    5. `cd ..`
+   6. update the `pnpm-workspace.yaml` file as needed
 3. use the local version of the packages throughout your cospace
    ```sh
    pnpm setOverrides
